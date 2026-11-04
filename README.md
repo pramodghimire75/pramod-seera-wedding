@@ -15,6 +15,8 @@ A mobile-friendly bilingual (English/Nepali) wedding invitation for Pramod Ghimi
 - `style.css` — responsive styling
 - `script.js` — live countdown and English/Nepali language toggle
 - `ganesha-art.png` — decorative Ganesha artwork
+- Sanskrit Ganesha blessing displayed beneath the artwork
+- Six photo-gallery spaces for the couple's pictures
 - `thank-you.html` — RSVP confirmation page
 - `netlify.toml` — Netlify publish directory and basic response headers
 
@@ -37,3 +39,17 @@ The form uses Netlify Forms (`data-netlify="true"`). After deploying, open the s
 Edit `index.html` for names, dates, venue, times and invitation wording. Edit `style.css` for appearance. Edit `script.js` for countdown or language behaviour. Replace `ganesha-art.png` with another image using the same filename if you want to change the artwork. Commit and push changes to GitHub; Netlify will redeploy automatically.
 
 Before sharing widely, replace the exact venue and time placeholders and test the RSVP form on a phone. The countdown is set to Nepal time (UTC+05:45).
+
+
+## Add your photos to the gallery
+
+The page includes six photo spaces: two for Pramod, two for Seera, and two for photos together.
+
+1. Open `index.html` and find the section with `class="photo-gallery"`.
+2. Replace a placeholder `<div class="photo-slot ...">...</div>` with an image, for example:
+   `<img class="gallery-photo" src="photos/pramod-1.jpg" alt="Pramod">`
+3. Create a folder named `photos` in the repository and upload the matching image files there. Use JPG, PNG or WebP and keep each filename exactly the same as the `src` path.
+4. Repeat for the other slots using names such as `seera-1.jpg`, `together-1.jpg`, `pramod-2.jpg`, `seera-2.jpg`, and `together-2.jpg`.
+5. Commit the changes to GitHub. Netlify will update the website automatically.
+
+You can change the captions and add or remove photo slots by editing the same gallery section. Choose photos you are both happy to share publicly, because anyone with the invitation link may be able to view them.
