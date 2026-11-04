@@ -6,6 +6,7 @@ A mobile-friendly bilingual (English/Nepali) wedding invitation for Pramod Ghimi
 
 - **15 February 2027:** Wedding ceremony (the couple will marry on this date).
 - **16 February 2027:** Wedding reception — this is the main guest invitation date.
+- **Parents:** Tika Ram Ghimire & Mina Kafle (groom); Ram Chandra Sedhai & Shiva Devi Bhattrai (bride). Names are displayed in English and Nepali.
 - **Location:** Jhapa, Nepal. Exact venue and start time are placeholders until confirmed.
 
 ## Files
