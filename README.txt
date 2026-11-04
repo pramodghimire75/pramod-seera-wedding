@@ -1,0 +1,1 @@
+GitHub deployment instructions are in README.md. Upload the contents of this folder to a new GitHub repository, then import that repository into Netlify. Do not upload the ZIP file itself to the repository; upload the files inside it.
