@@ -10,6 +10,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .photo-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-flow:dense;gap:12px;margin:30px auto 0;max-width:1050px}
+    .gallery-item{position:relative;margin:0;overflow:hidden;border:3px solid #c99b50;border-radius:13px;background:#f4ead8;box-shadow:0 8px 24px rgba(70,25,34,.12);min-height:180px;aspect-ratio:4/5}
+    .gallery-item img{display:block;width:100%;height:100%;min-height:180px;object-fit:cover;transition:transform .45s ease}
+    .gallery-item:hover img{transform:scale(1.035)}
+    .gallery-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;color:#fff;text-align:left;font-family:'Playfair Display',serif;font-size:15px;background:linear-gradient(transparent,rgba(48,13,22,.72))}
+    .gallery-wide{grid-column:span 2;aspect-ratio:16/9}
+    .gallery-tall{grid-row:span 2;aspect-ratio:4/5}
+    @media(min-width:720px){.photo-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.gallery-wide{grid-column:span 2}.gallery-tall{grid-row:span 2}.gallery-item{min-height:230px}.gallery-item img{min-height:230px}}
+  </style>
+
 </head>
 <body>
   <div class="topbar"><span class="top-mark">❀</span><span data-en="A CELEBRATION OF LOVE" data-ne="प्रेमको उत्सव">A CELEBRATION OF LOVE</span><button id="languageToggle" class="lang-toggle" type="button" aria-label="Change language">नेपाली</button></div>
@@ -31,7 +42,7 @@
           <div class="family-heading" data-en="WITH THE BLESSINGS OF OUR PARENTS" data-ne="हाम्रा आमाबुबाको आशीर्वादसहित">WITH THE BLESSINGS OF OUR PARENTS</div>
           <div class="family-grid">
             <div class="family-side">
-              <span class="family-label" data-en="Groom's Parents" data-ne="वरका माता–पिता">Groom's Parents</span>
+              <span class="family-label" data-en="Groom's Parents" data-ne="वरका अभिभावक">Groom's Parents</span>
               <strong>Tika Ram Ghimire</strong>
               <span class="family-ne">टिकाराम घिमिरे</span>
               <strong>Mina Kafle</strong>
@@ -39,7 +50,7 @@
             </div>
             <div class="family-divider" aria-hidden="true">✦</div>
             <div class="family-side">
-              <span class="family-label" data-en="Bride's Parents" data-ne="वधुका माता–पिता">Bride's Parents</span>
+              <span class="family-label" data-en="Bride's Parents" data-ne="वधुका अभिभावक">Bride's Parents</span>
               <strong>Ram Chandra Sedhai</strong>
               <span class="family-ne">रामचन्द्र सेढाई</span>
               <strong>Shiva Devi Bhattrai</strong>
@@ -70,15 +81,15 @@
       <h2 data-en="A little glimpse of us" data-ne="हाम्रो केही झलक">A little glimpse of us</h2>
       <p class="body-copy" data-en="Some favourite moments and memories as we get ready for our new journey together." data-ne="हाम्रो नयाँ यात्राको तयारीसँगै केही प्रिय पल र सम्झनाहरू।">Some favourite moments and memories as we get ready for our new journey together.</p>
       <div class="photo-gallery">
-        <div class="photo-slot photo-pramod"><span class="photo-symbol">✧</span><strong>Pramod's photo</strong><small>Add pramod-1.jpg</small></div>
-        <div class="photo-slot photo-seera"><span class="photo-symbol">✧</span><strong>Seera's photo</strong><small>Add seera-1.jpg</small></div>
-        <img class="gallery-photo" src="pramodseera02.png" alt="Pramod">
-        <div class="photo-slot photo-together"><span class="photo-symbol">♡</span><strong>Our photo together</strong><small>pramodseera02.png</small></div>
-        <div class="photo-slot photo-pramod"><span class="photo-symbol">✧</span><strong>Pramod's memory</strong><small>Add pramod-2.jpg</small></div>
-        <div class="photo-slot photo-seera"><span class="photo-symbol">✧</span><strong>Seera's memory</strong><small>Add seera-2.jpg</small></div>
-        <div class="photo-slot photo-together"><span class="photo-symbol">♡</span><strong>Another memory</strong><small>pramodseera01.png</small></div>
+        <figure class="gallery-item gallery-tall"><img src="e2c91c21-6956-47b3-90d5-9d64cdade921.jpeg" alt="Seera in a traditional red sari" loading="lazy"><figcaption>Seera</figcaption></figure>
+        <figure class="gallery-item"><img src="IMG_0638.jpeg" alt="Pramod in Canberra" loading="lazy"><figcaption>Pramod</figcaption></figure>
+        <figure class="gallery-item"><img src="DBE68828-4D01-4CF5-8862-F27641EF482B.jpeg" alt="Pramod and Seera — black and white portrait" loading="lazy"><figcaption>A moment together</figcaption></figure>
+        <figure class="gallery-item gallery-wide"><img src="pramodseera02.png" alt="Pramod and Seera together" loading="lazy"><figcaption>Our journey</figcaption></figure>
+        <figure class="gallery-item"><img src="2B653999-8074-4542-A339-838C4AD35AC0.jpeg" alt="Seera in a maroon sari" loading="lazy"><figcaption>Seera</figcaption></figure>
+        <figure class="gallery-item"><img src="IMG_0458.jpeg" alt="Pramod by the water" loading="lazy"><figcaption>Pramod</figcaption></figure>
+        <figure class="gallery-item"><img src="D76C610C-F155-4DEA-91F7-CE9E649E2B87.jpeg" alt="A childhood photo of Seera" loading="lazy"><figcaption>Little Seera</figcaption></figure>
+        <figure class="gallery-item"><img src="IMG_6025_Original.jpeg" alt="A childhood family celebration" loading="lazy"><figcaption>Childhood memories</figcaption></figure>
       </div>
-      <p class="gallery-note" data-en="To add your photos, follow the simple photo instructions in the README file." data-ne="आफ्ना तस्बिरहरू राख्न README फाइलमा दिइएको सजिलो निर्देशन पालना गर्नुहोस्।">To add your photos, follow the simple photo instructions in the README file.</p>
     </section>
 
     <section class="countdown-section">
